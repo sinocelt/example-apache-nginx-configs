@@ -4,7 +4,6 @@ server {
 
   # 🔥🔥🔥
   # make sure you that you change example.com with the name of your domain
-
   server_name www.example.com example.com;
   
   # 🔥🔥🔥
@@ -93,13 +92,15 @@ server {
 # 🔥🔥🔥
 # The following assumes that you have already set up a Certbot SSL file
 server {
+    # 🔥🔥🔥
+    # make sure you that you change example.com with the name of your domain
     if ($host = example.com) {
         return 301 https://$host$request_uri;
     } # managed by Certbot
 
-
+    # 🔥🔥🔥
+    # make sure you that you change example.com with the name of your domain
     server_name example.com www.example.com;
     listen 80;
     return 404; # managed by Certbot
-
 }
